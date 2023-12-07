@@ -1,8 +1,11 @@
+// deklarasi komponen TodoItem yang punya satu parameter yaitu todo
 const TodoItem = ({ todo }) => {
+  
+  // deklarasi updateTodo buat update data
+  const updateTodo = ({}) => {
+    todo.done = !todo.done // buat ngubah kalau misalkan task selesai itu tanda nya false dan sebaliknya
 
-  const updateTodo = () => {
-    todo.done = !todo.done
-
+// ngelakuin permintaan ke API dengan id nya, kalau misalkan ke update maka akan ada pesan di console log
     fetch("http://localhost:8000/todos/" + todo.id, {
       method: "PUT",
       headers: {
@@ -14,6 +17,7 @@ const TodoItem = ({ todo }) => {
     })
   }
 
+// ngelakuin permintaan ke API dengan id nya, kalau misalkan ke delete maka akan ada pesan di console log
   const deleteTodo = () => {
     fetch("http://localhost:8000/todos/" + todo.id, {
       method: "DELETE",
@@ -23,9 +27,12 @@ const TodoItem = ({ todo }) => {
   };
 
   return (
+    // ngecek kalau di todo nya udah selesai atau belum
     <li className={`${todo.done ? "checked" : ""}`}>
+      {/* kalau misalkan di klik bakal manggil updateTodo */}
       <div onClick={updateTodo}>{todo.task}</div> 
-      <span className="close" onClick={deleteTodo}>x</span>
+      {/* dan kalau x nya yang di klik bakal manggil deleteTodo  */}
+      <span className="close" onClick={deleteTodo}>x</span> 
     </li>
   );
 };

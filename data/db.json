@@ -1,14 +1,14 @@
 {
   "todos": [
     {
-      "id": 1,
-      "task": "Manual Book Praktikum PWEB (Minggu, 10 Des)",
-      "done": false
+      "id": 2,
+      "task": "Video Penjelasan Manual Book PWEB (Minggu, 10 Des)",
+      "done": true
     },
     {
-      "task": "Video Penjelasan Manual Book PWEB (Minggu, 10 Des)",
+      "task": "Video Penjelasan Manual Book IMK (Sabtu, 9 Des)",
       "done": false,
-      "id": 2
+      "id": 4
     }
   ]
 }

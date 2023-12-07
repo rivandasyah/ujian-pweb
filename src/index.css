@@ -1,17 +1,25 @@
+/* untuk mengatur ukuran konten */
 .content {
   max-width: 720px;
   margin: 0 auto;
 }
 
+/* untuk mengatur ukuran box agar lebih konsisten */
 * {
   box-sizing: border-box;
 }
 
+/* menetapkan margin dan padding ul agar tidak ada ruang
+tambahan disekitarnya */
 ul {
   margin: 0;
   padding: 0;
 }
 
+/* mengatur para li yang ada didalam ul agar kursor ketika didalam list nya menjadi pointer
+lalu mengatur agar posisinya relatif menyesuaikan, mengatur padding
+background warna ketika kondisi dalam keadaan false
+mengatur ukuran font menjadi 18px dan melakukan transisi ketika pointer berada di atas list*/
 ul li {
   cursor: pointer;
   position: relative;
@@ -27,20 +35,29 @@ ul li {
   user-select: none;
 }
 
+/* mengatur para li yang didalam ul yang merupakan indeks ganjil
+dimana background nya akan berwarna putih */
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }
 
+/* mengatur para li yang didalam ul ketika list itu diklik maka,
+akan menampilkan backgroundnya yang berwarna merah, dan color teks dan x nya berwarna putih */
 ul li:hover {
-  background: #ddd;
+  background: #F45050;
+  color: white;
 }
 
+/* mengatur para li yang didalam ul ketika mereka sudah di klik yang mana ter-update true,
+maka backgroundnya akan berwarna merah, color teks dan x nya berwarna putih,
+dan teks nya akan tercoret garis */
 ul li.checked {
-  background: #888;
+  background: #F45050;
   color: white;
   text-decoration: line-through;
 }
 
+/* mengatur para li yang didalam ul sebelum mereka di klik dan masih menjadi false */
 ul li.checked::before {
   content: '';
   position: absolute;
@@ -54,6 +71,8 @@ ul li.checked::before {
   width: 7px;
 }
 
+/* untuk mengatur tanda x atau close yang mana posisinya adalah absolute, 
+berada di posisi pinggir kanan dan atas, dan padding nya juga berjarak 12px atas bawah dan 16px kiri kanan */
 .close {
   position: absolute;
   right: 0;
@@ -61,24 +80,29 @@ ul li.checked::before {
   padding: 12px 16px 12px 16px;
 }
 
+/* untuk mengatur tanda x atau close ketika pointer diatasnya,
+akan menampilkan background warna merah dan warna teks serta tanda x nya putih */
 .close:hover {
-  background-color: #e74c3c;
+  background-color: #D21312;
   color: white;
 }
 
+/* untuk mengatur warna, padding, dan posisi dari header */
 .header {
-  background-color: #34495e;
+  background-color: #0174BE;
   padding: 30px 40px;
   color: white;
   text-align: center;
 }
 
+/* untuk mengatur ketika header sudah diisi akan menampilkan konten kosong dan tampilan menjadi tabel */
 .header::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* untuk menampilkan ketika data akan diinput dan peletakkan konten */
 input {
   margin: 0;
   border: none;
@@ -89,11 +113,12 @@ input {
   font-size: 16px;
 }
 
+/* untuk membuat peletakkan, pewarnaan, ukuran, dan ketika sedang berada diatas button nya akan menjadi pointer */
 .add-button {
   padding: 10px;
   width: 25%;
-  background: #d9d9d9;
-  color: #555;
+  background: #AEDEFC;
+  color: black;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -102,6 +127,8 @@ input {
   border-radius: 0;
 }
 
+/* ketika akan di klik akan menampilkan warna biru tua dan teks berwarna putih  */
 .add-button:hover {
-  background-color: #bbb;
+  background-color: #0D1282;
+  color: whitesmoke;
 }
